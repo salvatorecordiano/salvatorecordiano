@@ -2,6 +2,8 @@
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style type="text/css">
+                @import url("https://fonts.googleapis.com/css?family=Pacifico:400|Lato:400&display=swap");
+                
                 * {
                     margin: 0;
                     padding: 0;
@@ -9,67 +11,180 @@
                 body, html {
                     overflow: hidden;
                 }
+
+
                 .container {
-                    padding-top: 25px;
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                }
+                .container .box {
+                    width: 400px;
+                    height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .container .box .text {
                     text-align: center;
-                    font-family: sans-serif;
-                    font-weight: 700;
-                    color: #1C2833;
+                    color: rgb(51, 51, 51);
                 }
-                .animation {
-                    -webkit-animation: main 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                    animation: main 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+                .container .box .title {
+                    position: relative;
+                    width: 100%;
+                    height: 60px;
                 }
-                .name {
-                    font-size: 25px;
-                    animation-delay: 0.1s;
+                .container .box .title .text {
+                    font-size: 42px;
+                    line-height: 58px;
+                    font-family: 'Pacifico', cursive;
+                    -webkit-animation: textAnimation 2s forwards;
+                    -o-animation: textAnimation 2s forwards;
+                    animation: textAnimation 2s forwards;
+                    animation-delay: 3.2s;
+                    opacity: 0;
                 }
-                .role {
-                    font-size: 10px;
-                    animation-delay: 0.9s;
+                .container .box .title .block {
+                    position: absolute;
+                    width: 0%;
+                    display: flex;
+                    height: inherit;
+                    background: #2b9cee;
+                    animation: blockAnimationLeft 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+                    animation-delay: 1.6s;
                 }
-                @-webkit-keyframes main {
+
+
+                .container .box .role {
+                    position: relative;
+                    width: 100%;
+                    height: 35px;
+                }
+                .container .box .role .text {
+                    font-size: 22px;
+                    line-height: 32px;
+                    font-family: 'Lato', sans-serif;
+                    -webkit-animation: textAnimation 2s forwards;
+                    -o-animation: textAnimation 2s forwards;
+                    animation: textAnimation 2s forwards;
+                    animation-delay: 4.6s;
+                    opacity: 0;
+                }
+                .container .box .role .block {
+                    position: absolute;
+                    width: 0%;
+                    display: flex;
+                    height: inherit;
+                    background: #2b9cee;
+                    animation: blockAnimationRight 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+                    animation-delay: 3.2s;
+                }
+
+
+                .container .links {
+                    text-align: center;
+                    margin-top: 25px;
+                    opacity: 0;
+                    font-family: 'Lato', sans-serif;
+                    -webkit-animation: textAnimation 2s forwards;
+                    -o-animation: textAnimation 2s forwards;
+                    animation: textAnimation 2s forwards;
+                    animation-delay: 6s;
+                }
+                .container .links a {
+                    text-decoration: none;
+                    color: rgb(51, 51, 51);
+                }
+                .container .links a:hover {
+                    text-decoration: underline;
+                    color: rgb(51, 51, 51);
+                }
+
+                .container .top 
+                {
+                    position: absolute;
+                    background-color: #2b9cee;
+                    width: 0%;
+                    height: 10px;
+                    top: 0px;
+                    left: 0px;
+                    animation: blockAnimationLeft 5s infinite cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+                    animation-delay: 6s;
+                }
+                .container .bottom 
+                {
+                    position: absolute;
+                    background-color: #2b9cee;
+                    width: 0%;
+                    height: 10px;
+                    bottom: 0px;
+                    right: 0px;
+                    animation: blockAnimationRight 5s infinite cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+                    animation-delay: 6s;
+                }
+
+
+                @keyframes blockAnimationLeft {
                     0% {
-                        letter-spacing: 1em;
-                        -webkit-transform: translateZ(300px);
-                        transform: translateZ(300px);
-                        -webkit-filter: blur(12px);
-                        filter: blur(12px);
+                        width: 0%;
+                        left: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        left: 0;
+                    }
+                    100% {
+                        width: 0;
+                        left: 100%;
+                    }
+                }
+
+                @keyframes blockAnimationRight {
+                    0% {
+                        width: 0%;
+                        right: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        right: 0;
+                    }
+                    100% {
+                        width: 0;
+                        right: 100%;
+                    }
+                }
+
+                @keyframes textAnimation {
+                    0% {
                         opacity: 0;
                     }
                     100% {
-                        -webkit-transform: translateZ(12px);
-                        transform: translateZ(12px);
-                        -webkit-filter: blur(0);
-                        filter: blur(0);
                         opacity: 1;
                     }
                 }
-                @keyframes main {
-                    0% {
-                        letter-spacing: 1em;
-                        -webkit-transform: translateZ(300px);
-                        transform: translateZ(300px);
-                        -webkit-filter: blur(12px);
-                        filter: blur(12px);
-                        opacity: 0;
-                    }
-                    100% {
-                        -webkit-transform: translateZ(12px);
-                        transform: translateZ(12px);
-                        -webkit-filter: blur(0);
-                        filter: blur(0);
-                        opacity: 1;
-                    }
-                }
+
             </style>
             <div class="container">
-                <div class="animation name">
-                    Salvatore Cordiano
+                <div class="top"></div>
+                <div class="box">
+                    <div class="title">
+                        <span class="block"></span>
+                        <div class="text">Salvatore Cordiano</div>
+                    </div>
+                    <div class="role">
+                        <span class="block"></span>
+                        <div class="text">Lead Developer</div>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.salvatorecordiano.it/" target="_blank">Blog</a> | <a href="https://www.salvatorecordiano.it/about-me/" target="_blank">About Me</a> | <a href="https://www.salvatorecordiano.it/get-in-touch/" target="_blank">Contact</a> | <a href="https://www.parallel.it/" target="_blank">Parallel</a>
+                    </div>
                 </div>
-                <div class="animation role">
-                    Lead Developer
-                </div>
+                <div class="bottom"></div>
             </div>
         </div>
     </foreignObject>
