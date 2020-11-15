@@ -4,7 +4,7 @@
 
 <div align="center">
     <a href="https://www.salvatorecordiano.it/">
-        <img height="200" src="https://raw.githubusercontent.com/salvatorecordiano/salvatorecordiano/test/welcome.svg?sanitized=true&v=20201115" alt="Welcome to my GitHub!" />
+        <img src="https://raw.githubusercontent.com/salvatorecordiano/salvatorecordiano/test/welcome.svg?sanitized=true&v=20201116" alt="Welcome to my GitHub!" />
     </a>
 </div>
 
