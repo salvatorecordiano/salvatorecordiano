@@ -1,9 +1,7 @@
 ## Welcome to my GitHub!
 
-<div align="center">
-    <a href="https://www.salvatorecordiano.it/">
-        <img src="https://raw.githubusercontent.com/salvatorecordiano/salvatorecordiano/master/welcome.svg?v=202011161525" alt="Welcome to my GitHub!" />
-    </a>
-</div>
+# 👋 Ciao folks! I'm Salvatore Cordiano.
+
+I'm a people leader and an engineer at heart. My work consists in building the best **People-first** and **happy workplace**. I help engineering organizations drive impactful business outcomes through _operational excellence_ and _empathy_.
 
 Discover more about me [here](https://www.salvatorecordiano.it) or `dig -t txt bc.salvatorecordiano.it. +short`
