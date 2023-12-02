@@ -1,6 +1,6 @@
 ## Welcome to my GitHub!
 
-# 👋 Ciao folks! I'm Salvatore Cordiano.
+# 👋 Ciao folks! I'm Salvatore Cordiano
 
 I'm a leader and an engineer at heart. My work consists of building the best **People-first**, **happy workplaces**. I help engineering organizations drive impactful business outcomes through _operational excellence_ and _empathy_.
 
